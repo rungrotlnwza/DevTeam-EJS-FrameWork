@@ -10,6 +10,8 @@ app.disable('view cache')
 app.use(expressLayouts)
 app.set('layout',false)
 
+app.use(require('./routes/router.js'));
+
 app.get('/',(req,res)=>{
     res.render(path.join(__dirname,'./view/index.ejs'))
 })
