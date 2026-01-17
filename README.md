@@ -218,7 +218,7 @@ npm install
 1. เพิ่ม repository ของ framework เป็น remote ชื่อ `framework`:
 
    ```bash
-   git remote add framework https://github.com/rungrotlnwza/DevTeam-Framwork.git
+   git remote add framework https://github.com/https://github.com/rungrotlnwza/DevTeam-EJS-FrameWork.git
    ```
 
 2. ตรวจสอบ remotes:
@@ -232,8 +232,8 @@ npm install
    ```
    origin    https://github.com/rungrotlnwza/mywebframwork.git (fetch)
    origin    https://github.com/rungrotlnwza/mywebframwork.git (push)
-   framework https://github.com/rungrotlnwza/DevTeam-Framwork.git (fetch)
-   framework https://github.com/rungrotlnwza/DevTeam-Framwork.git (push)
+   framework https://github.com/rungrotlnwza/DevTeam-EJS-FrameWork.git (fetch)
+   framework https://github.com/rungrotlnwza/DevTeam-EJS-FrameWork.git (push)
    ```
 
 ### ขั้นตอนที่ 4: อัปเดต Framework
