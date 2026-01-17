@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/rungrotlnwza/DevTeam-EJS-FrameWork#readme",
   "dependencies": {
+    "connect-livereload": "^0.6.1",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
     "express-ejs-layouts": "^2.5.1",
+    "livereload": "^0.10.3",
     "nodemon": "^3.1.11"
   }
 }
