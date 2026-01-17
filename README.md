@@ -36,6 +36,8 @@ DevTeam Framework 2 ถูกพัฒนาขึ้นเพื่อแก้
 - Live Reload สำหรับการพัฒนา
 - โครงสร้างโปรเจกต์เข้าใจง่าย
 - เหมาะสำหรับเว็บแบบ Multi-page
+- mysqli.config.js สำหรับการเชื่อมต่อฐานข้อมูล
+- .vscode สำหรับการตั้งค่าโปรเจกต์ (Auto Format on Save)
 
 ---
 
@@ -47,6 +49,7 @@ DevTeam Framework 2 ถูกพัฒนาขึ้นเพื่อแก้
 - express-ejs-layouts
 - livereload
 - connect-livereload
+- mysql2
 
 ---
 
@@ -82,6 +85,10 @@ cp example.env .env
 | ---------- | ------------------------- | ------- |
 | PORT       | พอร์ตสำหรับรันเซิร์ฟเวอร์ | 3000    |
 | LIVERELOAD | เปิดหรือปิด Live Reload   | true   |
+| DB_HOST    | Host ของฐานข้อมูล         | localhost |
+| DB_USER    | Username ของฐานข้อมูล     | root    |
+| DB_PASS    | Password ของฐานข้อมูล     |         |
+| DB_NAME    | ชื่อฐานข้อมูล             |         |
 
 ---
 
@@ -102,6 +109,42 @@ LIVERELOAD=true
 ดูรายละเอียดเพิ่มเติมเกี่ยวกับการทำงานของ Live Reload ได้ที่ `docs/livereload.md`
 
 ---
+### mysqli.config.js
+
+Devteam framework 2 ใช้ mysqli.config.js ในการเชื่อมต่อฐานข้อมูล
+mysqli.config นั้นเป็นการทำให้ผุ้ไช้ที่ย้ายมาจาก php สามารถเข้าใจบริบทการเชื่อมต่อฐานข้อมูลได้ง่ายขึ้น เพราะเป็น function ที่คล้ายกับ mysqli_connect ใน php 
+
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=mypassword
+DB_NAME=mydb
+```
+
+
+### .vscode (Project Settings)
+
+โปรเจกต์นี้มาพร้อมกับการตั้งค่าโฟลเดอร์ `.vscode` เพื่อให้ทุกคนในทีมทำงานได้ภายใต้มาตรฐานเดียวกัน (Consistency) โดยมีข้อดีหลักๆ ดังนี้:
+
+- **Auto Format on Save**: โค้ดจะถูกจัดระเบียบให้สวยงามโดยอัตโนมัติทุกครั้งที่กดบันทึก (Save)
+- **Unified Standard**: บังคับใช้ Formatter เดียวกันทั้งโปรเจกต์ (เช่น EJS Beautify สำหรับไฟล์ .ejs) ทำให้ Code Diff ใน Git สะอาดและอ่านง่าย
+- **Zero Setup**: สมาชิกใหม่ที่โหลดโปรเจกต์ไป ไม่ต้องวุ่นวายกับการตั้งค่า Formatter เอง เพราะระบบจะดึงค่าจากไฟล์ในโปรเจกต์ไปไช้ทันที
+- **Language Support**: รองรับการจัดฟอร์แมตทั้ง HTML, CSS, JavaScript และ EJS อย่างแม่นยำ
+
+การใช้ `.vscode` จะช่วยลดปัญหาเรื่อง "โค้ดคนละสไตล์" และทำให้การทำงานร่วมกันเป็นไปได้อย่างราบรื่นที่สุดครับ
+
+#### Recommended Extensions
+
+เพื่อให้ได้รับประสบการณ์การพัฒนาที่ดีที่สุด แนะนำให้ติดตั้ง Extension เหล่านี้ (ระบบจะเด้งแนะนำให้อัตโนมัติเมื่อเปิดโปรเจกต์):
+
+| Extension | Purpose |
+| --------- | ------- |
+| **EJS Beautify** | จัดฟอร์แมตไฟล์ `.ejs` ให้สวยงามและอ่านง่าย |
+| **Auto Rename Tag** | แก้ไขชื่อ Tag คู่กัน (เปิด/ปิด) อัตโนมัติ |
+| **Helium Icon Theme** | เพิ่ม Icon สวยๆ ให้กับไฟล์ในโปรเจกต์เพื่อการแยกแยะที่ง่ายขึ้น |
+| **HTML End Tag Labels** | เพิ่ม Label ท้าย Tag ปิด เพื่อบอกว่าคือจุดสิ้นสุดของ ID/Class ไหน |
+| **Path Intellisense** | ช่วยเติม Path ไฟล์อัตโนมัติ ลดความผิดพลาดในการระบุตำแหน่งไฟล์ |
+
 
 ## Running the Project
 
